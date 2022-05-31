@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Fira+Sans:wght@400;500;600&family=Germania+One&family=Josefin+Sans&family=Lato&family=Lobster&family=Nunito&family=Oleo+Script&family=Oswald:wght@300;400;500;700&family=PT+Sans:ital@1&family=Poppins:wght@400;500&family=Ubuntu:ital,wght@0,400;0,700;1,500&family=Yanone+Kaffeesatz:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: Fira sans;
+    min-height: 100vh;
+    background: rgb(186, 186, 246);
+}
+.wrapper{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.wrapper .title{
+    margin-bottom: 70px;
+}
+.wrapper .title h2{
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.wrapper .title form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.wrapper .title form #name,
+.wrapper .title form #no{
+    padding: 14px;
+    border: 1px solid rgba(0,0,0,.4);
+    outline: none;
+    flex: 1;
+}
+.wrapper .title form #btn{
+    padding: 14px;
+    border: 1px solid #00000066;
+    outline: none;
+    background: rgb(139, 227, 91);
+    cursor: pointer;
+    
+}
+.body{
+    /* background: rgba(255,255,250,.24); */
+}
+.body .userUl .userList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background:rgba(0,0,0,.04);
+}
+.body .userUl .userList img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.body .userUl .userList .userWrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.body .userUl .userList .userWrapper #userName{
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(5, 5, 106);
+}
+.body .userUl .userList .deleteIcon{
+    color: rgb(136, 26, 26);
+    font-size: 23px;
+    cursor: pointer;
+}
+.body .userUl .userList .deleteIcon i{
+    pointer-events: none;
+}
+
+@media (max-width:600px) {
+    .wrapper .title h2{
+        font-size: 23px;
+    }
+    .wrapper .title form{
+        flex-direction: column;
+        width: 100%;
+    }
+    .wrapper .title form input{
+        width: 100%;
+    }
+    .wrapper .title form #btn{
+        display: block;
+        width: 100%;
+    }
+    
+}
