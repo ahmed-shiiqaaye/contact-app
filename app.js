@@ -1,12 +1,14 @@
 let nameField = document.getElementById("name");
 let noField = document.getElementById("no");
 let addBtn = document.getElementById("btn");
+let contact = document.querySelector(".contact");
 // ul
 let mybody = document.getElementById("body");
 let ul = document.querySelector("#ul");
 // addEventListener
 addBtn.addEventListener("click", add);
-
+// no
+let noes = 0
 //Functions
 function add(e) {
   e.preventDefault();
@@ -16,7 +18,6 @@ function add(e) {
     document.querySelectorAll("input").forEach((input) => {
       input.style.borderColor = "#00000066";
     });
-    console.log("yes");
     // create div
     let newLi = document.createElement("li");
     newLi.classList.add("userList");
@@ -33,6 +34,9 @@ function add(e) {
     nameField.value = "";
     noField.value = "";
     newLi.addEventListener("click", remove);
+    noes++
+    console.log(noes);
+    contact.textContent = `(${noes})`
   } else {
     document.querySelectorAll("input").forEach((input) => {
       input.style.borderColor = "red";
@@ -46,6 +50,9 @@ function remove(e) {
   let parentLi = selected.parentElement;
   if (selected.classList.contains("deleteIcon")) {
     parentLi.remove();
+    noes--
+    contact.textContent = `(${noes})`
+    console.log(noes);
   }
 }
 // getting random number between 0 - img.length
@@ -58,3 +65,5 @@ let img = [
   "https://media.istockphoto.com/vectors/default-placeholder-man-vector-id844000458?k=20&m=844000458&s=612x612&w=0&h=6vA5LeyqldiTyXVUbTjR-c148f7x0k-qeisBCbV7ZFc=",
   "https://media.istockphoto.com/vectors/female-avatar-profile-picture-silhouette-light-shadow-vector-id885234698?k=20&m=885234698&s=612x612&w=0&h=_tU856TWSs-DHSjkobQlNnvxhw14k2-dY1XbAxohI2Y=",
 ];
+
+

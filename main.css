@@ -18,7 +18,7 @@ body{
     padding: 20px;
 }
 .wrapper .title{
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 .wrapper .title h2{
     font-weight: 900;
@@ -49,8 +49,16 @@ body{
     cursor: pointer;
     
 }
-.body{
-    /* background: rgba(255,255,250,.24); */
+.body .h4{
+    border-bottom: 1px solid rgb(5, 5, 106);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.body .h4 .contact{
+    color: rgb(248, 248, 248);
+    font-weight: bold;
 }
 .body .userUl .userList{
     display: flex;
